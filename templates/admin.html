@@ -1,0 +1,509 @@
+{% extends "base.html" %}
+
+{% block title %}
+Admin Dashboard | Saffron Table
+{% endblock %}
+
+{% block content %}
+
+<main class="admin-page">
+
+    <!-- Dashboard Header -->
+    <section class="admin-header">
+    <div class="admin-header-content">
+        <div class="admin-header-text">
+            <p class="section-eyebrow">SAFFRON TABLE • ADMIN</p>
+            <h1>Restaurant <span>Dashboard</span></h1>
+            <p class="admin-header-description">Manage reservations and customer messages from one place.</p>
+        </div>
+        <div class="admin-header-actions">
+            <a href="{{ url_for('admin_logout') }}" class="btn logout-btn">Logout</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Dashboard Statistics -->
+    <section class="admin-stats">
+
+    <!-- Total Reservations -->
+    <div class="stat-card">
+
+        <p class="stat-label">
+            TOTAL RESERVATIONS
+        </p>
+
+        <p class="stat-number">
+            {{ total_reservations }}
+        </p>
+
+    </div>
+
+
+    <!-- Pending -->
+    <div class="stat-card">
+
+        <p class="stat-label">
+            PENDING
+        </p>
+
+        <p class="stat-number">
+            {{ pending_reservations }}
+        </p>
+
+    </div>
+
+
+    <!-- Confirmed -->
+    <div class="stat-card">
+
+        <p class="stat-label">
+            CONFIRMED
+        </p>
+
+        <p class="stat-number">
+            {{ confirmed_reservations }}
+        </p>
+
+    </div>
+
+
+    <!-- Cancelled -->
+    <div class="stat-card">
+
+        <p class="stat-label">
+            CANCELLED
+        </p>
+
+        <p class="stat-number">
+            {{ cancelled_reservations }}
+        </p>
+
+    </div>
+
+
+    <!-- Total Messages -->
+    <div class="stat-card">
+
+        <p class="stat-label">
+            TOTAL MESSAGES
+        </p>
+
+        <p class="stat-number">
+            {{ total_messages }}
+        </p>
+
+    </div>
+
+
+    <!-- Unread Messages -->
+    <div class="stat-card">
+
+        <p class="stat-label">
+            UNREAD MESSAGES
+        </p>
+
+        <p class="stat-number">
+            {{ unread_messages }}
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- Reservation Section -->
+    <section class="admin-reservations">
+
+        <div class="admin-section-header">
+
+            <div>
+                <h2>Reservations</h2>
+
+                <p>
+                    All reservations submitted through the website.
+                </p>
+            </div>
+
+            <div class="reservation-count">
+                {{ reservations|length }} Reservations
+            </div>
+
+        </div>
+
+
+        {% if reservations %}
+
+        <div class="table-wrapper">
+
+            <table class="reservation-table">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Guests</th>
+                        <th>Special Requests</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+
+                    {% for reservation in reservations %}
+
+                    <tr>
+
+                        <td>
+                            {{ reservation['id'] }}
+                        </td>
+
+                        <td>
+                            <strong>
+                                {{ reservation['name'] }}
+                            </strong>
+                        </td>
+
+                        <td>
+                            {{ reservation['phone'] }}
+                        </td>
+
+                        <td>
+                            {{ reservation['email'] }}
+                        </td>
+
+                        <td>
+                            {{ reservation['date'] }}
+                        </td>
+
+                        <td>
+                            {{ reservation['time'] }}
+                        </td>
+
+                        <td>
+                            {{ reservation['guests'] }}
+                        </td>
+
+                        <td>
+                            {% if reservation['special_requests'] %}
+                                {{ reservation['special_requests'] }}
+                            {% else %}
+                                <span class="no-request">
+                                    No special request
+                                </span>
+                            {% endif %}
+                        </td>
+                        <td>
+                        {% if reservation['status'] == 'Confirmed' %}
+
+                            <span class="status-badge status-confirmed">
+                                Confirmed
+                            </span>
+
+                        {% elif reservation['status'] == 'Cancelled' %}
+
+                            <span class="status-badge status-cancelled">
+                                Cancelled
+                            </span>
+
+                        {% else %}
+
+                            <span class="status-badge status-pending">
+                                Pending
+                            </span>
+
+                        {% endif %}
+                    </td>
+                    <td class="reservation-actions">
+
+                            {% if reservation['status'] == 'Pending' %}
+
+                                <form
+                                    action="{{ url_for('confirm_reservation', reservation_id=reservation['id']) }}"
+                                    method="POST"
+                                >
+                                    <button type="submit" class="action-btn confirm-btn">
+                                        Confirm
+                                    </button>
+                                </form>
+
+                                <form
+                                    action="{{ url_for('cancel_reservation', reservation_id=reservation['id']) }}"
+                                    method="POST"
+                                >
+                                    <button type="submit" class="action-btn cancel-btn">
+                                        Cancel
+                                    </button>
+                                </form>
+
+                            {% elif reservation['status'] == 'Confirmed' %}
+
+                                <form
+                                    action="{{ url_for('cancel_reservation', reservation_id=reservation['id']) }}"
+                                    method="POST"
+                                >
+                                    <button type="submit" class="action-btn cancel-btn">
+                                        Cancel
+                                    </button>
+                                </form>
+
+                            {% else %}
+
+                                <span class="no-action">
+                                    No actions
+                                </span>
+
+                            {% endif %}
+
+
+                            <!-- Delete Button -->
+                            <form
+                                action="{{ url_for('delete_reservation', reservation_id=reservation['id']) }}"
+                                method="POST"
+                                onsubmit="return confirm('Are you sure you want to delete this reservation?');"
+                            >
+                                <button type="submit" class="action-btn delete-btn">
+                                    Delete
+                                </button>
+                            </form>
+
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="no-reservations">
+
+            <div class="empty-icon">
+                📅
+            </div>
+
+            <h3>No Reservations Yet</h3>
+
+            <p>
+                When customers book a table through your website,
+                their reservations will appear here.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </section>
+
+    <!-- =========================================================
+     CONTACT MESSAGES
+     ========================================================= -->
+
+    <!-- =========================================================
+     CONTACT MESSAGES
+     ========================================================= -->
+
+<section class="admin-section">
+
+    <div class="admin-section-header">
+
+        <div>
+
+            <p class="section-eyebrow">
+                CUSTOMER COMMUNICATION
+            </p>
+
+            <h2>
+                Contact <span>Messages</span>
+            </h2>
+
+            <p class="admin-section-description">
+                Messages received from customers through the contact form.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    {% if messages %}
+
+    <div class="messages-table-container">
+
+        <table class="messages-table">
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Contact</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for message in messages %}
+
+                <tr>
+
+                    <!-- ID -->
+                    <td class="message-id">
+                        #{{ message["id"] }}
+                    </td>
+
+
+                    <!-- Customer -->
+                    <td class="message-customer">
+
+                        <strong>
+                            {{ message["name"] }}
+                        </strong>
+
+                    </td>
+
+
+                    <!-- Contact -->
+                    <td class="message-contact">
+
+                        <a href="mailto:{{ message['email'] }}">
+                            {{ message["email"] }}
+                        </a>
+
+                        {% if message["phone"] %}
+
+                        <span>
+                            {{ message["phone"] }}
+                        </span>
+
+                        {% endif %}
+
+                    </td>
+
+
+                    <!-- Subject -->
+                    <td class="message-subject">
+
+                        {% if message["subject"] %}
+
+                            {{ message["subject"] }}
+
+                        {% else %}
+
+                            <span class="no-value">
+                                No subject
+                            </span>
+
+                        {% endif %}
+
+                    </td>
+
+
+                    <!-- Message -->
+                    <td class="message-content">
+
+                        {{ message["message"] }}
+
+                    </td>
+
+
+                    <!-- Status -->
+                    <td>
+
+                        {% if message["status"] == "Unread" %}
+
+                            <span class="message-status unread">
+                                Unread
+                            </span>
+
+                        {% else %}
+
+                            <span class="message-status read">
+                                Read
+                            </span>
+
+                        {% endif %}
+
+                    </td>
+
+
+                    <!-- Actions -->
+                    <td class="message-actions">
+
+                        {% if message["status"] == "Unread" %}
+
+                        <form
+                            action="{{ url_for('mark_message_read', message_id=message['id']) }}"
+                            method="POST"
+                        >
+
+                            <button
+                                type="submit"
+                                class="message-action read-action"
+                            >
+                                Mark Read
+                            </button>
+
+                        </form>
+
+                        {% endif %}
+
+
+                        <form
+                            action="{{ url_for('delete_message', message_id=message['id']) }}"
+                            method="POST"
+                            onsubmit="return confirm('Are you sure you want to delete this message?');"
+                        >
+
+                            <button
+                                type="submit"
+                                class="message-action delete-action"
+                            >
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    {% else %}
+
+    <div class="empty-state">
+
+        <p>
+            No contact messages yet.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</section>
+
+</main>
+
+{% endblock %}

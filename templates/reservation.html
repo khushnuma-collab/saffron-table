@@ -1,0 +1,299 @@
+{% extends "base.html" %}
+
+{% block title %}
+Reservations | Saffron Table
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <!-- =====================================================
+         1. RESERVATION HERO
+         ===================================================== -->
+    <section class="hero menu-hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                RESERVATIONS
+            </p>
+
+            <h1>
+                Reserve Your <span>Table</span>
+            </h1>
+
+            <p class="hero-description">
+                Join us for an unforgettable dining experience.
+                Whether it's an intimate dinner or a celebratory
+                gathering, we look forward to welcoming you to
+                Saffron Table.
+            </p>
+
+            <a href="#reservation-form" class="btn btn-primary">
+                Book Now
+            </a>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1400&q=85"
+                alt="Elegant table setting at Saffron Table ready for guests">
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         2. RESERVATION FORM & INFORMATION
+         ===================================================== -->
+    <section id="reservation-form" class="introduction">
+
+        <!-- Reservation Form -->
+        <div class="intro-content">
+
+            <p class="eyebrow">
+                BOOK A TABLE
+            </p>
+
+            <h2>
+                Make a <span>Reservation</span>
+            </h2>
+
+            <p>
+                Please fill out the form below and we will confirm
+                your booking shortly. For parties larger than 8,
+                please contact us directly.
+            </p>
+
+
+            <form action="#" method="POST">
+
+                <!-- Full Name -->
+                <div>
+                    <label for="name">Full Name</label><br>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="John Doe"
+                        required>
+                </div>
+
+                <br>
+
+
+                <!-- Phone Number -->
+                <div>
+                    <label for="phone">Phone Number</label><br>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+91 98765 43210"
+                        required>
+                </div>
+
+                <br>
+
+
+                <!-- Email Address -->
+                <div>
+                    <label for="email">Email Address</label><br>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="john@example.com"
+                        required>
+                </div>
+
+                <br>
+
+
+                <!-- Date -->
+                <div>
+                    <label for="date">Date</label><br>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required>
+                </div>
+
+                <br>
+
+
+                <!-- Preferred Time -->
+                <div>
+                    <label for="time">Preferred Time</label><br>
+
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        required>
+                </div>
+
+                <br>
+
+
+                <!-- Number of Guests -->
+                <div>
+                    <label for="guests">Number of Guests</label><br>
+
+                    <input
+                        type="number"
+                        id="guests"
+                        name="guests"
+                        min="1"
+                        max="20"
+                        placeholder="2"
+                        required>
+                </div>
+
+                <br>
+
+
+                <!-- Special Requests -->
+                <div>
+                    <label for="requests">Special Requests</label><br>
+
+                    <textarea
+                        id="requests"
+                        name="requests"
+                        rows="4"
+                        placeholder="Any dietary requirements or special occasions?"></textarea>
+                </div>
+
+                <br>
+
+
+                <!-- Reservation Policy -->
+                <div>
+                    <label for="policy">
+
+                        <input
+                            type="checkbox"
+                            id="policy"
+                            name="policy"
+                            required>
+
+                        I agree to the restaurant's reservation policy.
+
+                    </label>
+                </div>
+
+                <br>
+
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">
+                    Reserve Table
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Reservation Information -->
+        <div class="intro-content">
+
+            <p class="eyebrow">
+                GOOD TO KNOW
+            </p>
+
+            <h2>
+                Reservation <span>Information</span>
+            </h2>
+
+
+            <h3>Opening Hours</h3>
+
+            <p>Monday – Sunday</p>
+            <p>Lunch: 12:00 PM – 3:30 PM</p>
+            <p>Dinner: 6:30 PM – 11:30 PM</p>
+
+            <br>
+
+
+            <h3>Contact Us</h3>
+
+            <p>
+                Phone:
+                <a href="tel:+911234567890">
+                    +91 12345 67890
+                </a>
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:hello@saffrontable.com">
+                    hello@saffrontable.com
+                </a>
+            </p>
+
+            <br>
+
+
+            <h3>Address</h3>
+
+            <address>
+                24 Saffron Avenue<br>
+                Jaipur, Rajasthan, India
+            </address>
+
+            <br>
+
+            <p>
+                <em>
+                    Reservations are recommended, especially for weekends.
+                </em>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         3. DINING EXPERIENCE CTA
+         ===================================================== -->
+    <section class="final-cta">
+
+        <div class="cta-content">
+
+            <p class="eyebrow">
+                YOUR TABLE AWAITS
+            </p>
+
+            <h2>
+                Your Table <span>Awaits</span>
+            </h2>
+
+            <p>
+                While you plan your visit, take a moment to explore
+                our menu. We have crafted every dish to make your
+                dining experience truly memorable.
+            </p>
+
+            <a href="{{ url_for('menu') }}" class="btn btn-primary">
+                Explore Our Menu
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

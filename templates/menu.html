@@ -1,0 +1,826 @@
+{% extends "base.html" %}
+
+{% block title %}
+Menu | Saffron Table
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <!-- =====================================================
+         MENU HERO
+         ===================================================== -->
+    <section class="hero menu-hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                SAFFRON TABLE
+            </p>
+
+            <h1>
+                Our <span>Menu</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover modern Indian cuisine where traditional
+                recipes meet contemporary techniques, fresh
+                ingredients, and elegant presentation.
+            </p>
+
+            <a href="#menu-items" class="btn btn-primary">
+                Explore Our Dishes
+            </a>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85"
+                alt="Beautifully presented modern Indian cuisine">
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MENU CATEGORY NAVIGATION
+         ===================================================== -->
+    <section class="menu-categories">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                EXPLORE OUR MENU
+            </p>
+
+            <h2>
+                Choose Your <span>Favorites</span>
+            </h2>
+
+            <p>
+                From comforting classics to contemporary creations,
+                explore dishes crafted with authentic Indian flavors.
+            </p>
+
+        </div>
+
+
+        <div class="category-buttons">
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="all">
+                All
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="starters">
+                Starters
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="main-course">
+                Main Course
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="biryani">
+                Biryani
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="breads">
+                Breads
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="desserts">
+                Desserts
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="drinks">
+                Drinks
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MENU ITEMS
+         ===================================================== -->
+    <section id="menu-items" class="featured-dishes">
+
+
+        <!-- ================= STARTERS ================= -->
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                TO BEGIN
+            </p>
+
+            <h2>
+                <span>Starters</span>
+            </h2>
+
+            <p>
+                Flavorful beginnings prepared fresh from our kitchen.
+            </p>
+
+        </div>
+
+
+        <div class="dish-grid">
+
+            <!-- Paneer Tikka -->
+            <article class="dish-card" data-category="starters">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=800&q=80"
+                        alt="Paneer tikka with grilled vegetables">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Paneer Tikka</h3>
+                        <span class="price">₹395</span>
+                    </div>
+
+                    <p>
+                        Char-grilled paneer marinated with yogurt,
+                        aromatic spices, and herbs.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Chicken Seekh Kebab -->
+            <article class="dish-card" data-category="starters">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80"
+                        alt="Chicken seekh kebab served with chutney">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Chicken Seekh Kebab</h3>
+                        <span class="price">₹445</span>
+                    </div>
+
+                    <p>
+                        Juicy minced chicken kebabs seasoned with
+                        traditional Indian spices.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Crispy Corn Chaat -->
+            <article class="dish-card" data-category="starters">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                        alt="Crispy corn chaat with fresh herbs">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Crispy Corn Chaat</h3>
+                        <span class="price">₹295</span>
+                    </div>
+
+                    <p>
+                        Golden crispy corn tossed with onion, herbs,
+                        spices, and tangy chutneys.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Tandoori Prawns -->
+            <article class="dish-card" data-category="starters">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=800&q=80"
+                        alt="Tandoori prawns with herbs and spices">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Tandoori Prawns</h3>
+                        <span class="price">₹595</span>
+                    </div>
+
+                    <p>
+                        Succulent prawns marinated in tandoori spices
+                        and cooked to perfection.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ================= MAIN COURSE ================= -->
+
+        <div class="section-heading menu-section-heading">
+
+            <p class="eyebrow">
+                FROM THE KITCHEN
+            </p>
+
+            <h2>
+                Main <span>Course</span>
+            </h2>
+
+            <p>
+                Rich, comforting Indian classics with a modern touch.
+            </p>
+
+        </div>
+
+
+        <div class="dish-grid">
+
+            <!-- Butter Chicken -->
+            <article class="dish-card" data-category="main-course">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80"
+                        alt="Creamy butter chicken">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Butter Chicken</h3>
+                        <span class="price">₹495</span>
+                    </div>
+
+                    <p>
+                        Tender chicken cooked in a creamy tomato,
+                        butter, and aromatic spice sauce.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Paneer Lababdar -->
+            <article class="dish-card" data-category="main-course">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80"
+                        alt="Paneer lababdar in rich tomato gravy">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Paneer Lababdar</h3>
+                        <span class="price">₹425</span>
+                    </div>
+
+                    <p>
+                        Soft paneer simmered in a rich tomato gravy
+                        with aromatic Indian spices.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dal Makhani -->
+            <article class="dish-card" data-category="main-course">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
+                        alt="Creamy dal makhani">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Dal Makhani</h3>
+                        <span class="price">₹345</span>
+                    </div>
+
+                    <p>
+                        Slow-cooked black lentils finished with butter,
+                        cream, and fragrant spices.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Mutton Rogan Josh -->
+            <article class="dish-card" data-category="main-course">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80"
+                        alt="Mutton rogan josh with Indian spices">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Mutton Rogan Josh</h3>
+                        <span class="price">₹595</span>
+                    </div>
+
+                    <p>
+                        Slow-cooked tender mutton in a fragrant
+                        Kashmiri-style spice gravy.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ================= BIRYANI ================= -->
+
+        <div class="section-heading menu-section-heading">
+
+            <p class="eyebrow">
+                FRAGRANT & AROMATIC
+            </p>
+
+            <h2>
+                <span>Biryani</span>
+            </h2>
+
+            <p>
+                Fragrant basmati rice layered with spices and
+                slow-cooked flavors.
+            </p>
+
+        </div>
+
+
+        <div class="dish-grid">
+
+            <!-- Chicken Biryani -->
+            <article class="dish-card" data-category="biryani">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=80"
+                        alt="Chicken biryani with basmati rice">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Chicken Biryani</h3>
+                        <span class="price">₹495</span>
+                    </div>
+
+                    <p>
+                        Aromatic basmati rice layered with tender
+                        chicken, saffron, and traditional spices.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Vegetable Biryani -->
+            <article class="dish-card" data-category="biryani">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80"
+                        alt="Vegetable biryani with colorful vegetables">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Vegetable Biryani</h3>
+                        <span class="price">₹395</span>
+                    </div>
+
+                    <p>
+                        Fragrant rice cooked with seasonal vegetables,
+                        herbs, and aromatic spices.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Mutton Biryani -->
+            <article class="dish-card" data-category="biryani">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80"
+                        alt="Mutton biryani with saffron rice">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Mutton Biryani</h3>
+                        <span class="price">₹595</span>
+                    </div>
+
+                    <p>
+                        Slow-cooked tender mutton layered with
+                        fragrant basmati rice and saffron.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ================= BREADS ================= -->
+
+        <div class="section-heading menu-section-heading">
+
+            <p class="eyebrow">
+                FRESH FROM THE TANDOOR
+            </p>
+
+            <h2>
+                <span>Breads</span>
+            </h2>
+
+            <p>
+                Freshly baked breads made to complement every dish.
+            </p>
+
+        </div>
+
+
+        <div class="dish-grid">
+
+            <!-- Garlic Naan -->
+            <article class="dish-card" data-category="breads">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                        alt="Garlic naan bread">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Garlic Naan</h3>
+                        <span class="price">₹145</span>
+                    </div>
+
+                    <p>
+                        Soft tandoor-baked naan finished with garlic,
+                        butter, and fresh coriander.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Butter Naan -->
+            <article class="dish-card" data-category="breads">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80"
+                        alt="Fresh butter naan">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Butter Naan</h3>
+                        <span class="price">₹110</span>
+                    </div>
+
+                    <p>
+                        Classic soft naan brushed generously with
+                        warm melted butter.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Tandoori Roti -->
+            <article class="dish-card" data-category="breads">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=800&q=80"
+                        alt="Traditional tandoori roti">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Tandoori Roti</h3>
+                        <span class="price">₹75</span>
+                    </div>
+
+                    <p>
+                        Traditional whole-wheat roti baked in our
+                        clay tandoor.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ================= DESSERTS ================= -->
+
+        <div class="section-heading menu-section-heading">
+
+            <p class="eyebrow">
+                SOMETHING SWEET
+            </p>
+
+            <h2>
+                <span>Desserts</span>
+            </h2>
+
+            <p>
+                A sweet ending inspired by India's timeless desserts.
+            </p>
+
+        </div>
+
+
+        <div class="dish-grid">
+
+            <!-- Gulab Jamun -->
+            <article class="dish-card" data-category="desserts">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1601303516534-9c4d6d5a1a1b?auto=format&fit=crop&w=800&q=80"
+                        alt="Warm gulab jamun dessert">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Gulab Jamun</h3>
+                        <span class="price">₹195</span>
+                    </div>
+
+                    <p>
+                        Soft golden dumplings soaked in fragrant
+                        cardamom and saffron syrup.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Rasmalai -->
+            <article class="dish-card" data-category="desserts">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
+                        alt="Creamy rasmalai with pistachios">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Rasmalai</h3>
+                        <span class="price">₹225</span>
+                    </div>
+
+                    <p>
+                        Delicate cheese dumplings served in chilled
+                        saffron and cardamom milk.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Saffron Kulfi -->
+            <article class="dish-card" data-category="desserts">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+                        alt="Saffron kulfi dessert">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Saffron Kulfi</h3>
+                        <span class="price">₹195</span>
+                    </div>
+
+                    <p>
+                        Creamy traditional kulfi infused with saffron,
+                        cardamom, and crushed pistachios.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ================= DRINKS ================= -->
+
+        <div class="section-heading menu-section-heading">
+
+            <p class="eyebrow">
+                REFRESH & RECHARGE
+            </p>
+
+            <h2>
+                <span>Drinks</span>
+            </h2>
+
+            <p>
+                Refreshing Indian-inspired beverages to accompany
+                your meal.
+            </p>
+
+        </div>
+
+
+        <div class="dish-grid">
+
+            <!-- Masala Chaas -->
+            <article class="dish-card" data-category="drinks">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80"
+                        alt="Refreshing masala chaas">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Masala Chaas</h3>
+                        <span class="price">₹125</span>
+                    </div>
+
+                    <p>
+                        Chilled buttermilk blended with roasted cumin,
+                        mint, and aromatic spices.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Mango Lassi -->
+            <article class="dish-card" data-category="drinks">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=80"
+                        alt="Creamy mango lassi">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Mango Lassi</h3>
+                        <span class="price">₹195</span>
+                    </div>
+
+                    <p>
+                        Smooth yogurt blended with ripe mangoes
+                        for a naturally refreshing drink.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Fresh Lime Soda -->
+            <article class="dish-card" data-category="drinks">
+
+                <div class="dish-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80"
+                        alt="Fresh lime soda with mint">
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+                        <h3>Fresh Lime Soda</h3>
+                        <span class="price">₹145</span>
+                    </div>
+
+                    <p>
+                        Freshly squeezed lime, sparkling soda,
+                        mint, and a hint of sweetness.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
+    <section class="final-cta">
+
+        <div class="cta-content">
+
+            <p class="eyebrow">
+                YOUR TABLE AWAITS
+            </p>
+
+            <h2>
+                Make Your <span>Evening Special</span>
+            </h2>
+
+            <p>
+                Gather your loved ones and experience modern Indian
+                cuisine in an elegant and welcoming atmosphere.
+            </p>
+
+            <a href="{{ url_for('reservation') }}" class="btn btn-primary">
+                Book a Table
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

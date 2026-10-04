@@ -1,0 +1,473 @@
+{% extends "base.html" %}
+
+{% block title %}
+Saffron Table | Modern Indian Restaurant
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">MODERN INDIAN CUISINE</p>
+
+            <h1>
+                Where Tradition
+                Meets <span>Modern Taste.</span>
+            </h1>
+
+            <p class="hero-description">
+                Experience the rich flavors of India reimagined with
+                contemporary techniques, fresh ingredients, and a touch
+                of elegance.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('menu') }}" class="btn btn-primary">
+                    Explore Menu
+                </a>
+
+                <a href="{{ url_for('reservation') }}" class="btn btn-secondary">
+                    Book a Table
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80"
+                alt="Elegant modern Indian dish served at Saffron Table">
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== INTRODUCTION ==================== -->
+    <section id="about" class="introduction">
+
+        <div class="intro-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=80"
+                alt="Beautifully presented Indian cuisine">
+
+        </div>
+
+        <div class="intro-content">
+
+            <p class="eyebrow">OUR STORY</p>
+
+            <h2>
+                A Taste of India,
+                <span>Reimagined.</span>
+            </h2>
+
+            <p>
+                At Saffron Table, we celebrate the soul of Indian cuisine
+                while giving it a modern expression. Our kitchen brings
+                together time-honored recipes, seasonal ingredients, and
+                contemporary culinary techniques.
+            </p>
+
+            <p>
+                Every plate is created to tell a story — one filled with
+                warmth, tradition, creativity, and unforgettable flavor.
+            </p>
+
+            <a href="{{ url_for('about') }}" class="btn btn-primary">
+                Discover Our Story
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== FEATURED DISHES ==================== -->
+    <section id="menu" class="featured-dishes">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">FROM OUR KITCHEN</p>
+
+            <h2>Featured <span>Dishes</span></h2>
+
+            <p>
+                Discover some of our chef's favorite creations,
+                prepared fresh with carefully selected ingredients.
+            </p>
+
+        </div>
+
+
+        <div class="dish-grid">
+
+            <!-- Dish 1 -->
+            <article class="dish-card">
+
+                <div class="dish-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80"
+                        alt="Butter chicken with Indian spices">
+
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+
+                        <h3>Royal Butter Chicken</h3>
+
+                        <span class="price">₹495</span>
+
+                    </div>
+
+                    <p>
+                        Tender chicken simmered in a rich tomato,
+                        butter, and aromatic spice sauce.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dish 2 -->
+            <article class="dish-card">
+
+                <div class="dish-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80"
+                        alt="Traditional Indian biryani">
+
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+
+                        <h3>Saffron Biryani</h3>
+
+                        <span class="price">₹545</span>
+
+                    </div>
+
+                    <p>
+                        Fragrant basmati rice layered with delicate
+                        spices, saffron, and slow-cooked flavors.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dish 3 -->
+            <article class="dish-card">
+
+                <div class="dish-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80"
+                        alt="Indian paneer dish">
+
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+
+                        <h3>Smoked Paneer Tikka</h3>
+
+                        <span class="price">₹425</span>
+
+                    </div>
+
+                    <p>
+                        Char-grilled paneer marinated with herbs,
+                        spices, and a subtle smoky finish.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dish 4 -->
+            <article class="dish-card">
+
+                <div class="dish-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80"
+                        alt="Indian dessert with pistachios">
+
+                </div>
+
+                <div class="dish-content">
+
+                    <div class="dish-header">
+
+                        <h3>Pistachio Rasmalai</h3>
+
+                        <span class="price">₹295</span>
+
+                    </div>
+
+                    <p>
+                        Soft, delicate rasmalai infused with saffron,
+                        cardamom, and crushed pistachios.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="why-us">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">THE SAFFRON TABLE EXPERIENCE</p>
+
+            <h2>Why <span>Choose Us?</span></h2>
+
+            <p>
+                More than a meal — an experience crafted with care.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <article class="feature-card">
+
+                <div class="feature-icon">🌿</div>
+
+                <h3>Fresh Ingredients</h3>
+
+                <p>
+                    We source fresh, quality ingredients to bring
+                    vibrant flavors to every plate.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">👨‍🍳</div>
+
+                <h3>Expert Chefs</h3>
+
+                <p>
+                    Our chefs combine culinary expertise with
+                    creativity and passion.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">🍛</div>
+
+                <h3>Traditional Recipes</h3>
+
+                <p>
+                    Classic Indian flavors are preserved while
+                    being presented in a contemporary way.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">✨</div>
+
+                <h3>Memorable Experience</h3>
+
+                <p>
+                    From the atmosphere to the final bite,
+                    every detail is designed to delight.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== GALLERY PREVIEW ==================== -->
+    <section id="gallery" class="gallery-preview">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">A GLIMPSE INSIDE</p>
+
+            <h2>Our <span>Gallery</span></h2>
+
+            <p>
+                Take a look at the food, atmosphere, and moments
+                that make Saffron Table special.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80"
+                alt="Elegant restaurant interior">
+
+            <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+                alt="Beautifully plated restaurant dish">
+
+            <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                alt="Warm restaurant dining area">
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                alt="Indian food served at a table">
+
+            <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80"
+                alt="Premium restaurant dining experience">
+
+            <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                alt="Freshly prepared food">
+
+        </div>
+
+
+        <div class="gallery-button">
+
+            <a href="{{ url_for('gallery') }}" class="btn btn-secondary">
+                View Gallery
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CUSTOMER REVIEWS ==================== -->
+    <section class="reviews">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">WHAT OUR GUESTS SAY</p>
+
+            <h2>Guest <span>Reviews</span></h2>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+            <!-- Review 1 -->
+            <article class="review-card">
+
+                <div class="stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                </div>
+
+                <blockquote>
+                    "An incredible dining experience. Every dish was
+                    beautifully presented and packed with flavor."
+                </blockquote>
+
+                <p class="reviewer">— Priya Sharma</p>
+
+            </article>
+
+
+            <!-- Review 2 -->
+            <article class="review-card">
+
+                <div class="stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                </div>
+
+                <blockquote>
+                    "The perfect combination of traditional Indian
+                    flavors and modern presentation. Absolutely loved it."
+                </blockquote>
+
+                <p class="reviewer">— Arjun Mehta</p>
+
+            </article>
+
+
+            <!-- Review 3 -->
+            <article class="review-card">
+
+                <div class="stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                </div>
+
+                <blockquote>
+                    "Beautiful ambience, warm service, and delicious
+                    food. Saffron Table is now one of our favorites."
+                </blockquote>
+
+                <p class="reviewer">— Neha Kapoor</p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== FINAL CALL TO ACTION ==================== -->
+    <section id="booking" class="final-cta">
+
+        <div class="cta-content">
+
+            <p class="eyebrow">YOUR TABLE AWAITS</p>
+
+            <h2>
+                Ready for a memorable
+                <span>dining experience?</span>
+            </h2>
+
+            <p>
+                Gather your loved ones and let us make your next
+                meal something truly special.
+            </p>
+
+            <a href="{{ url_for('reservation') }}" class="btn btn-primary">
+                Book Your Table
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

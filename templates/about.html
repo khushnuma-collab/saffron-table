@@ -1,0 +1,332 @@
+{% extends "base.html" %}
+
+{% block title %}
+About Us | Saffron Table
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <!-- =====================================================
+         1. ABOUT HERO
+         ===================================================== -->
+    <section class="hero menu-hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                SAFFRON TABLE
+            </p>
+
+            <h1>
+                Our <span>Story</span>
+            </h1>
+
+            <p class="hero-description">
+                A journey of passion, flavor, and tradition.
+                Discover how Saffron Table brings the soul of
+                Indian cuisine to life with a modern touch.
+            </p>
+
+            <a href="#our-story" class="btn btn-primary">
+                Read Our Journey
+            </a>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=85"
+                alt="Elegant interior of Saffron Table restaurant">
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         2. OUR STORY
+         ===================================================== -->
+    <section id="our-story" class="introduction">
+
+        <div class="intro-image">
+            <img
+                src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1000&q=80"
+                alt="Traditional Indian spices and ingredients">
+        </div>
+
+        <div class="intro-content">
+
+            <p class="eyebrow">
+                OUR JOURNEY
+            </p>
+
+            <h2>
+                A Taste of India, <span>Reimagined.</span>
+            </h2>
+
+            <p>
+                Saffron Table was born from a simple dream: to create a
+                dining experience that honors the rich culinary heritage
+                of India while embracing the elegance of modern
+                gastronomy. Our journey began in a small family kitchen,
+                where recipes were passed down through generations,
+                each carrying its own story and secret blend of spices.
+            </p>
+
+            <p>
+                Today, we bring those cherished family recipes to your
+                table. We source the freshest seasonal ingredients,
+                handpick our spices, and combine them with
+                contemporary techniques to create dishes that are both
+                familiar and beautifully unexpected. Every plate at
+                Saffron Table is crafted not just to feed, but to
+                create a lasting memory.
+            </p>
+
+            <a href="{{ url_for('menu') }}" class="btn btn-secondary">
+                Explore Our Menu
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         3. OUR PHILOSOPHY
+         ===================================================== -->
+    <section class="why-us">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                WHAT DRIVES US
+            </p>
+
+            <h2>
+                Our <span>Philosophy</span>
+            </h2>
+
+            <p>
+                The core values that guide every dish we serve and
+                every guest we welcome.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <article class="feature-card">
+
+                <div class="feature-icon">🌶️</div>
+
+                <h3>Authentic Flavours</h3>
+
+                <p>
+                    We stay true to the roots of Indian cuisine,
+                    using traditional spice blends and time-honored
+                    cooking methods.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">🌿</div>
+
+                <h3>Fresh Ingredients</h3>
+
+                <p>
+                    We believe great food starts with great
+                    ingredients. We source fresh, seasonal produce
+                    to ensure vibrant, natural flavors.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">👨‍🍳</div>
+
+                <h3>Thoughtful Cooking</h3>
+
+                <p>
+                    Every dish is prepared with intention, care,
+                    and a deep respect for the culinary craft,
+                    balancing tradition with innovation.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">🤝</div>
+
+                <h3>Warm Hospitality</h3>
+
+                <p>
+                    We treat every guest like family, offering
+                    warm, attentive service that makes you feel
+                    at home from the moment you arrive.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         4. MEET OUR CHEF
+         ===================================================== -->
+    <section class="introduction">
+
+        <div class="intro-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1000&q=80"
+                alt="Chef Arjun Mehra preparing a dish">
+
+        </div>
+
+        <div class="intro-content">
+
+            <p class="eyebrow">
+                THE CULINARY ARTIST
+            </p>
+
+            <h2>
+                Meet <span>Chef Arjun Mehra</span>
+            </h2>
+
+            <p>
+                With over two decades of experience in some of the
+                world's finest kitchens, Chef Arjun Mehra brings a
+                wealth of knowledge and a deep passion for Indian
+                cuisine. Trained in traditional Mughlai and Awadhi
+                cooking, he has spent his career perfecting the
+                delicate balance of spices and flavors.
+            </p>
+
+            <p>
+                <strong>His Philosophy:</strong> "Food is not just
+                about taste; it is about memory and emotion. I want
+                every guest to take a bite and feel the warmth of
+                an Indian home, presented with the elegance of a
+                modern dining experience."
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         5. THE SAFFRON TABLE EXPERIENCE
+         ===================================================== -->
+    <section class="reviews">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                ATMOSPHERE & AMBIANCE
+            </p>
+
+            <h2>
+                The <span>Saffron Table</span> Experience
+            </h2>
+
+            <p>
+                More than just a meal — a complete sensory journey.
+            </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+            <article class="review-card">
+
+                <h3>Elegant Interiors</h3>
+
+                <p>
+                    Our dining space blends modern sophistication
+                    with warm, earthy tones, creating the perfect
+                    backdrop for an unforgettable evening.
+                </p>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <h3>Comfortable Dining</h3>
+
+                <p>
+                    From intimate corner tables to spacious family
+                    seating, every detail is designed to ensure
+                    your utmost comfort throughout the meal.
+                </p>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <h3>Warm Service</h3>
+
+                <p>
+                    Our attentive staff is dedicated to making your
+                    visit seamless and enjoyable, anticipating your
+                    needs with genuine hospitality.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         6. CALL TO ACTION
+         ===================================================== -->
+    <section class="final-cta">
+
+        <div class="cta-content">
+
+            <p class="eyebrow">
+                YOUR TABLE AWAITS
+            </p>
+
+            <h2>
+                Come Taste <span>Our Story</span>
+            </h2>
+
+            <p>
+                We invite you to join us for an evening of exceptional
+                food, warm company, and beautiful surroundings.
+                Let us make your next meal truly memorable.
+            </p>
+
+            <a
+                href="{{ url_for('reservation') }}"
+                class="btn btn-primary">
+                Book a Table
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+Reservation Confirmed | Saffron Table
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
+        <div class="confirmation-container">
+
+            <div class="confirmation-icon">
+                ✓
+            </div>
+
+            <p class="section-eyebrow">RESERVATION CONFIRMED</p>
+
+            <h1>Thank You for Booking!</h1>
+
+            <p class="confirmation-message">
+                Your reservation request has been successfully received.
+                We look forward to welcoming you to Saffron Table.
+            </p>
+
+            <div class="confirmation-actions">
+                <a href="{{ url_for('home') }}" class="btn btn-primary">
+                    Back to Home
+                </a>
+
+                <a href="{{ url_for('menu') }}" class="btn btn-secondary">
+                    Explore Our Menu
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}

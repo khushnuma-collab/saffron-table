@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+
+{% block title %}
+Gallery | Saffron Table
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+    <!-- =====================================================
+         1. GALLERY HERO
+         ===================================================== -->
+    <section class="hero menu-hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                GALLERY
+            </p>
+
+            <h1>
+                A Taste for <span>the Eyes</span>
+            </h1>
+
+            <p class="hero-description">
+                Step inside the world of Saffron Table. From
+                beautifully plated dishes to our warm, elegant
+                interiors, explore the moments that make our
+                dining experience truly unforgettable.
+            </p>
+
+            <a href="#gallery-grid" class="btn btn-primary">
+                Explore Our Gallery
+            </a>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
+                alt="Elegant dining area at Saffron Table">
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         2. GALLERY CATEGORY NAVIGATION
+         ===================================================== -->
+    <section class="menu-categories">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                EXPLORE OUR GALLERY
+            </p>
+
+            <h2>
+                Moments at <span>Saffron Table</span>
+            </h2>
+
+            <p>
+                Browse through our curated collection of food,
+                atmosphere, and the people who make it all happen.
+            </p>
+
+        </div>
+
+
+        <div class="category-buttons">
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="all">
+                All
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="food">
+                Food
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="restaurant">
+                Restaurant
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="chef">
+                Chef
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-category="dining">
+                Dining
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         3. MAIN GALLERY
+         ===================================================== -->
+    <section id="gallery-grid" class="gallery-preview">
+
+        <div class="gallery-grid">
+
+            <!-- Item 1: Food -->
+            <figure class="gallery-item" data-category="food">
+                <img
+                    src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=80"
+                    alt="Creamy butter chicken served in a traditional bowl">
+            </figure>
+
+
+            <!-- Item 2: Restaurant (Large) -->
+            <figure class="gallery-item large" data-category="restaurant">
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80"
+                    alt="Elegant modern interior of Saffron Table restaurant">
+            </figure>
+
+
+            <!-- Item 3: Chef -->
+            <figure class="gallery-item" data-category="chef">
+                <img
+                    src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80"
+                    alt="Chef Arjun Mehra preparing a dish in the kitchen">
+            </figure>
+
+
+            <!-- Item 4: Dining -->
+            <figure class="gallery-item" data-category="dining">
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                    alt="Beautifully set dining table at Saffron Table">
+            </figure>
+
+
+            <!-- Item 5: Food (Dessert) -->
+            <figure class="gallery-item" data-category="food">
+                <img
+                    src="https://images.unsplash.com/photo-1601303516534-9c4d6d5a1a1b?auto=format&fit=crop&w=800&q=80"
+                    alt="Traditional Indian dessert with pistachios">
+            </figure>
+
+
+            <!-- Item 6: Restaurant -->
+            <figure class="gallery-item" data-category="restaurant">
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+                    alt="Warm and inviting dining area">
+            </figure>
+
+
+            <!-- Item 7: Chef (Large) -->
+            <figure class="gallery-item large" data-category="chef">
+                <img
+                    src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80"
+                    alt="Chef carefully plating a modern Indian dish">
+            </figure>
+
+
+            <!-- Item 8: Food (Drink) -->
+            <figure class="gallery-item" data-category="food">
+                <img
+                    src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80"
+                    alt="Refreshing Indian beverage served with mint">
+            </figure>
+
+
+            <!-- Item 9: Dining -->
+            <figure class="gallery-item" data-category="dining">
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80"
+                    alt="Guests enjoying a meal at Saffron Table">
+            </figure>
+
+
+            <!-- Item 10: Food (Close-up) -->
+            <figure class="gallery-item" data-category="food">
+                <img
+                    src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=80"
+                    alt="Close-up of aromatic Indian spices and ingredients">
+            </figure>
+
+
+            <!-- Item 11: Restaurant -->
+            <figure class="gallery-item" data-category="restaurant">
+                <img
+                    src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80"
+                    alt="Sophisticated bar area at Saffron Table">
+            </figure>
+
+
+            <!-- Item 12: Dining -->
+            <figure class="gallery-item" data-category="dining">
+                <img
+                    src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80"
+                    alt="Wine glasses set for an elegant dinner service">
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         4. GALLERY CTA
+         ===================================================== -->
+    <section class="final-cta">
+
+        <div class="cta-content">
+
+            <p class="eyebrow">
+                YOUR TABLE AWAITS
+            </p>
+
+            <h2>
+                Experience <span>Saffron Table</span>
+            </h2>
+
+            <p>
+                Pictures are beautiful, but the taste is unforgettable.
+                Join us for an evening of exceptional food, warm
+                hospitality, and an atmosphere designed to delight
+                all your senses.
+            </p>
+
+            <a href="{{ url_for('reservation') }}" class="btn btn-primary">
+                Reserve Your Table
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}
