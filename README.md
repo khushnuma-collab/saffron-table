@@ -77,6 +77,31 @@ The admin panel provides:
 
 ---
 
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Saffron Table Home Page](screenshots/home.png)
+
+### 🍽️ Menu
+
+![Saffron Table Menu](screenshots/menu.png)
+
+### 📅 Reservation
+
+![Saffron Table Reservation](screenshots/reservation.png)
+
+### 💬 Contact
+
+![Saffron Table Contact](screenshots/contact.png)
+
+### 🔐 Admin Dashboard
+
+![Saffron Table Admin Dashboard](screenshots/admin.png)
+
+
 ## 📁 Project Structure
 
 ```text
